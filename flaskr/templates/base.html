@@ -1,8 +1,9 @@
 <!doctype html>
 <title>{% block title %}{% endblock %} - Flaskr</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="{{url_for('static',filename='bootstrap.css')}}">
 <nav>
-  <h1>Flaskr</h1>
+  <h1 >Flaskr</h1>
   <ul>
     {% if g.user %}
       <li><span>{{ g.user['username'] }}</span>
@@ -13,7 +14,7 @@
     {% endif %}
   </ul>
 </nav>
-<section class="content">
+<section class="container content">
   <header>
     {% block header %}{% endblock %}
   </header>
